@@ -44,7 +44,7 @@
 
   header{
     position:sticky;top:0;z-index:50;
-    background:rgba(251,252,253,.92);backdrop-filter:blur(8px);
+    background:rgba(251,252,253,.92);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
     border-bottom:1px solid var(--line);
   }
   .nav{display:flex;align-items:center;justify-content:space-between;height:58px;}
@@ -127,6 +127,8 @@
     margin-top:72px;text-align:center;font-family:'Shippori Mincho',serif;
     font-size:17px;font-weight:600;letter-spacing:.05em;
   }
+  .nb{display:inline-block;}
+  br.sp{display:none;}
 
   .result-list{display:grid;gap:14px;}
   .result{
@@ -214,6 +216,8 @@
     .svc:not(.featured){border-left:3px solid var(--shu);border-radius:10px;}
     .svc:not(.featured):nth-child(2n+1){border-left-color:var(--ink);background:linear-gradient(180deg,#ffffff,#f4f8fb);}
     .svc-more{margin-top:56px;}
+    br.sp{display:inline;}
+    .svc-more .dash,.svc-more .pc-comma{display:none;}
     .hero-grid{grid-template-columns:1fr;gap:36px;}
     .portrait{justify-self:center;order:-1;}
     .hero-grid > div:first-child{text-align:center;}
@@ -300,21 +304,21 @@
     <p class="lede">「人手が足りない」「面倒で手が回らない」「AIを使いたいけど使いこなせない」<br>——オンラインで完結する業務なら、幅広く引き受けます。</p>
     <div class="svc-grid">
       <div class="svc featured">
-        <h3>生成AI活用・業務効率化の支援</h3>
+        <h3><span><span class="nb">生成AI活用・</span><span class="nb">業務効率化の支援</span></span></h3>
         <p>Claude・ChatGPT・Gemini・NotebookLM・Obsidianを毎日実務で使い倒しています。「この業務、AIでラクにならない？」の相談から、プロンプト設計、AIを組み込んだ業務フローの構築、集計・資料作成・リサーチのAI自動化まで。人がやると数日かかる作業を、AIで速く・正確に仕上げます。AIツールの導入支援や使い方レクチャーも対応——実務で使い込んできた技術を、そのままお伝えします。</p>
       </div>
       <div class="svc"><h3>データ集計・分析・レポート化</h3><p>アンケート・投票・SNSデータを、生データから意思決定に使える資料まで一気通貫で。生成AI×Pythonによる自動集計で、速さと正確さを両立します。</p></div>
-      <div class="svc"><h3>資料作成（PowerPoint / Excel）</h3><p>報告書・提案書・調査資料から履歴書・職務経歴書まで、提出品質で仕上げます。Excelはあらゆる関数に対応。相関図・フロー図などの図版制作も可能です。</p></div>
+      <div class="svc"><h3><span><span class="nb">資料作成</span><span class="nb">（PowerPoint / Excel）</span></span></h3><p>報告書・提案書・調査資料から履歴書・職務経歴書まで、提出品質で仕上げます。Excelはあらゆる関数に対応。相関図・フロー図などの図版制作も可能です。</p></div>
       <div class="svc"><h3>議事録・ドキュメント制作</h3><p>文字起こしからAIで整形・要約し、共有フォーマットに仕上げます。固有名詞の補正や匿名化ルールの運用まで含めて安定供給します。</p></div>
       <div class="svc"><h3>SNSキャンペーン運用サポート</h3><p>ファン投票などの企画を告知〜結果発表まで運用。日英2言語の投稿進行管理の実務経験があります。</p></div>
       <div class="svc"><h3>進行管理・スケジュール運用</h3><p>ロードマップ管理、進捗の突合、担当者別アラート生成で、多施策同時進行の案件でも抜け漏れを防ぎます。</p></div>
       <div class="svc"><h3>リサーチ・比較資料化</h3><p>競合・事例調査をAIで幅広く収集し、「比較できる形式」に整理。公式／非公式の判定など、事実確認まで踏み込みます。</p></div>
       <div class="svc"><h3>DRM・メールマーケティング</h3><p>ステップメールのシナリオ設計、CV導線最適化。MyASPを使った設計・実装・運用の実務経験があります。</p></div>
-      <div class="svc"><h3>LINE構築（Lステップ / Lメッセージ）</h3><p>Lステップ・Lメッセージを使ったLINE配信シナリオの構築・納品。生成AIを活用してシナリオ設計から実装まで対応します。</p></div>
+      <div class="svc"><h3><span><span class="nb">LINE構築</span><span class="nb">（Lステップ / Lメッセージ）</span></span></h3><p>Lステップ・Lメッセージを使ったLINE配信シナリオの構築・納品。生成AIを活用してシナリオ設計から実装まで対応します。</p></div>
       <div class="svc"><h3>ライティング</h3><p>LP・セールスコピー、YouTube台本、SNS投稿文など。マーケ視点×生成AIで「読ませて動かす」文章を速く量産します。</p></div>
       <div class="svc"><h3>その他・なんでも相談</h3><p>ジャンル不問。独特なアイデアとキテレツな切り口で、あなたのあらゆるお困りごとに何かしらの突破口を見出します。問題解決できる可能性、体感10%&thinsp;。ただし相談は無料なので、期待値は常にプラスです。</p></div>
     </div>
-    <p class="svc-more serif">——ここに載っていない仕事も、まずご相談ください。</p>
+    <p class="svc-more serif"><span class="dash">——</span>ここに載っていない仕事も<span class="pc-comma">、</span><br class="sp">まずご相談ください。</p>
   </div>
 </section>
 
