@@ -98,7 +98,7 @@
   .stats{background:var(--ink);color:#fff;padding:38px 0;}
   .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;text-align:center;}
   .stat b{display:block;font-family:'Shippori Mincho',serif;font-size:clamp(24px,3.6vw,34px);font-weight:700;letter-spacing:.02em;}
-  .stat b em{font-style:normal;font-size:.55em;margin-left:2px;}
+  .stat b em{font-style:normal;font-size:.58em;font-weight:900;font-family:'Noto Sans JP',sans-serif;vertical-align:.18em;margin-left:3px;}
   .stat span{display:block;font-size:12.5px;opacity:.75;margin-top:6px;letter-spacing:.06em;}
 
   .services{background:var(--wash);}
@@ -124,7 +124,7 @@
   .svc.featured h3::before{background:#fff;}
   .svc.featured p{color:rgba(255,255,255,.82);grid-column:1 / -1;}
   .svc-more{
-    margin-top:30px;text-align:center;font-family:'Shippori Mincho',serif;
+    margin-top:72px;text-align:center;font-family:'Shippori Mincho',serif;
     font-size:17px;font-weight:600;letter-spacing:.05em;
   }
 
@@ -185,11 +185,12 @@
 
   .price-box{
     margin-top:40px;background:var(--wash);border:1px dashed var(--line);border-radius:var(--radius);
-    padding:30px 32px;display:flex;gap:22px;align-items:flex-start;flex-wrap:wrap;
+    padding:30px 32px;display:flex;gap:22px;align-items:center;flex-wrap:wrap;
   }
   .price-box .tag{
-    flex:none;background:var(--ink);color:#fff;font-weight:700;font-size:13px;
-    padding:6px 16px;border-radius:999px;letter-spacing:.1em;
+    flex:none;background:transparent;color:var(--shu);font-weight:700;font-size:14px;
+    padding:8px 18px;border:1.5px solid var(--shu);border-radius:6px;letter-spacing:.12em;
+    font-family:'Shippori Mincho',serif;
   }
   .price-box p{font-size:14px;color:var(--ink-soft);flex:1;min-width:260px;}
 
@@ -208,6 +209,11 @@
     section{padding:56px 0;}
     .hero{padding:128px 0 52px;}
     .noren{height:88px;}
+    h1{line-height:1.42;}
+    .hero-sub{text-align:left;}
+    .svc:not(.featured){border-left:3px solid var(--shu);border-radius:10px;}
+    .svc:not(.featured):nth-child(2n+1){border-left-color:var(--ink);background:linear-gradient(180deg,#ffffff,#f4f8fb);}
+    .svc-more{margin-top:56px;}
     .hero-grid{grid-template-columns:1fr;gap:36px;}
     .portrait{justify-self:center;order:-1;}
     .hero-grid > div:first-child{text-align:center;}
@@ -252,7 +258,7 @@
   <div class="wrap hero-grid">
     <div>
       <span class="eyebrow">FREELANCE / HANDYMAN</span>
-      <h1>オンライン専門の、<br><span class="accent">なんでも屋</span>。</h1>
+      <h1>オンライン専門の<br><span class="accent">なんでも屋</span></h1>
       <p class="hero-sub">
         生成AIを人一倍使い倒すフリーランスです。データ集計、リサーチ、資料作成、議事録、SNS運用、マーケ施策の設計まで。
         AIと12年の現場経験を掛け合わせて、面倒な作業も複雑な案件も<strong>「そのまま使える完成品」</strong>にして納品します。
@@ -306,7 +312,7 @@
       <div class="svc"><h3>DRM・メールマーケティング</h3><p>ステップメールのシナリオ設計、CV導線最適化。MyASPを使った設計・実装・運用の実務経験があります。</p></div>
       <div class="svc"><h3>LINE構築（Lステップ / Lメッセージ）</h3><p>Lステップ・Lメッセージを使ったLINE配信シナリオの構築・納品。生成AIを活用してシナリオ設計から実装まで対応します。</p></div>
       <div class="svc"><h3>ライティング</h3><p>LP・セールスコピー、YouTube台本、SNS投稿文など。マーケ視点×生成AIで「読ませて動かす」文章を速く量産します。</p></div>
-      <div class="svc"><h3>その他・なんでも相談</h3><p>ジャンル不問。独特なアイデアとキテレツな切り口で、あなたのあらゆるお困りごとに何かしらの突破口を見出します。問題解決できる可能性、体感10%。ただし相談は無料なので、期待値は常にプラスです。</p></div>
+      <div class="svc"><h3>その他・なんでも相談</h3><p>ジャンル不問。独特なアイデアとキテレツな切り口で、あなたのあらゆるお困りごとに何かしらの突破口を見出します。問題解決できる可能性、体感10%&thinsp;。ただし相談は無料なので、期待値は常にプラスです。</p></div>
     </div>
     <p class="svc-more serif">——ここに載っていない仕事も、まずご相談ください。</p>
   </div>
@@ -317,7 +323,7 @@
   <div class="wrap">
     <span class="eyebrow">RESULTS</span>
     <h2>実績</h2>
-    <p class="lede">直近は大型ゲームIPの周年記念プロモーション案件に、マーケティング支援会社の業務委託メンバーとして参画。生成AIをフル活用した実務を積み重ねています。</p>
+    <p class="lede" style="max-width:none;">直近は大型ゲームIPの周年記念プロモーション案件に、マーケティング支援会社の業務委託メンバーとして参画。生成AIをフル活用した実務を積み重ねています。</p>
     <div class="result-list">
       <div class="result">
         <div class="num">数万票<small>誤りゼロ納品</small></div>
@@ -345,7 +351,7 @@
   <div class="wrap">
     <span class="eyebrow">CAREER</span>
     <h2>経歴</h2>
-    <p class="lede">「数字」と「人」の両方に正直であること。12年間、それを軸に現場で成果を出してきました。</p>
+    <p class="lede">営業からマーケティング、そして生成AIへ。12年間、現場で成果を出すことにこだわってきました。</p>
     <div class="tl">
       <div class="tl-item">
         <span class="period">12年間のキャリア</span>
@@ -426,7 +432,7 @@
 <section class="contact" id="contact">
   <div class="wrap">
     <span class="eyebrow">CONTACT</span>
-    <h2 class="serif">まずは、相談から。</h2>
+    <h2 class="serif" style="font-feature-settings:'palt';padding-left:0.5em;">まずは、相談から。</h2>
     <p>「誰に頼めばいいかわからない仕事」こそ、なんでも屋の出番です。フォームから内容をお送りいただければ、1営業日以内にお返事します。</p>
     <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfpBnMTbnJy3_W66BkEywCcP-ECFVSwtxbFKz5Vb_f9bv2g9Q/viewform?usp=header" target="_blank" rel="noopener">相談フォームを開く（無料）</a>
     <p class="sub">京都在住／フルリモート対応／土日祝も稼働可</p>
